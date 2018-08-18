@@ -8,8 +8,8 @@ var fsp = function (toggleSelector, contentAreaSelector, sidebarSelector) {
         this.stylesheet = document.styleSheets[0];
         this.opts = {
             side: 'left'
-        };
-    };
+        	};
+	};
 
     _fsp.prototype.sidepanel = function (options) {
         var me = this;
@@ -19,28 +19,28 @@ var fsp = function (toggleSelector, contentAreaSelector, sidebarSelector) {
 
         switch (this.opts.side) {
             case 'left':
-                this.stylesheet.insertRule(this.contentAreaSelector + "." + this.openStateClassName + "{ transform: translate3d(" + this.opts.size + ", 0, 0);}", 0);
+                this.stylesheet.insertRule(this.contentAreaSelector + "." + this.openStateClassName + 						"{ transform: translate3d(" + this.opts.size + ", 0, 0);}", 0);
                 break;
             case 'right':
-                this.stylesheet.insertRule(this.contentAreaSelector + "." + this.openStateClassName + "{ transform: translate3d(-" + this.opts.size + ", 0, 0);}", 0);
+                this.stylesheet.insertRule(this.contentAreaSelector + "." + this.openStateClassName + 						"{ transform: translate3d(-" + this.opts.size + ", 0, 0);}", 0);
                 break;
-        }
+        	}
 
         this.toggler.addEventListener("click", function (e) {
             me.toggle(e);
-        });
+        	});
 
         return me;
-    };
+    	};
 
     _fsp.prototype.toggle = function (e) {
         this.contentArea.classList.toggle(this.openStateClassName);
         if (e) {
             e.preventDefault();
-        }
+        	}
 
         return this.me;
-    };
+    	};
 
     return new _fsp(toggleSelector, contentAreaSelector, sidebarSelector);
 };
