@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>纯正的JavaScript滑动侧边栏（不依赖jquery）</title>
+<!--
     <script src="js/fsp-sidepanel.js"></script>
+-->
+    <script src="js/fsp-sidepanel-zh.js"></script>
     <link rel="stylesheet" href="css/fsp-sidepanel.css"/>
     <link rel="stylesheet" href="font/source-code-pro/source-code-pro.css"/>
     <style>
@@ -115,13 +118,13 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            fsp('#inner_demo1', '#mainSectionContent', '#innerLeftSidepanel').sidepanel({});
-            fsp('#inner_demo2', '#mainSectionContent', '#innerRightSidepanel').sidepanel({
-                side: 'right'
+            中文函数库.侧边栏开关('#inner_demo1', '#mainSectionContent', '#innerLeftSidepanel').切换({});
+            中文函数库.侧边栏开关('#inner_demo2', '#pageContent', '#pageLeftSidepanel').切换({});
+            中文函数库.侧边栏开关('#inner_demo3', '#mainSectionContent', '#innerRightSidepanel').切换({
+                侧边栏位置: '右'
             });
-            fsp('#inner_demo3', '#pageContent', '#pageLeftSidepanel').sidepanel({});
-            fsp('#inner_demo4', '#pageContent', '#pageRightSidepanel').sidepanel({
-                side: 'right'
+            中文函数库.侧边栏开关('#inner_demo4', '#pageContent', '#pageRightSidepanel').切换({
+                侧边栏位置: '右'
             });
         });
     </script>
@@ -181,7 +184,7 @@
                         </div>
                     </div>
 
-                    <div class="container button" id="inner_demo3">
+                    <div class="container button" id="inner_demo2">
                         <div>
                             <h3>全页高左侧边栏</h3>
                             <p><a href="#">点击切换</a></p>
@@ -192,7 +195,7 @@
 
                 <div class="containers">
 
-                    <div class="container button" id="inner_demo2">
+                    <div class="container button" id="inner_demo3">
                         <div>
                             <h3>内嵌右侧边栏</h3>
 
